@@ -17,7 +17,7 @@ export function ProductCard({ product, className }: ProductCardProps) {
           width={400}
           height={500}
           className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
-          data-ai-hint="fashion product"
+          data-ai-hint="pagne fabric african fashion"
         />
       </div>
       <div className="mt-4">
