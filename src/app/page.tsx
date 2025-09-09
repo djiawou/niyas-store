@@ -10,9 +10,9 @@ function Hero() {
     <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white overflow-hidden">
       <div className="absolute inset-0 bg-black/50 z-10" />
       <Image
-        src="https://picsum.photos/1800/1200"
-        alt="Elegant Muslim fashion"
-        data-ai-hint="elegant muslim fashion"
+        src="https://picsum.photos/seed/picsum/1800/1200"
+        alt="Femme portant une tenue traditionnelle colorée"
+        data-ai-hint="traditional african fashion"
         fill
         className="object-cover"
         priority
