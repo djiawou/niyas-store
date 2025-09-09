@@ -11,21 +11,21 @@ function Hero() {
       <div className="absolute inset-0 bg-black/50 z-10" />
       <Image
         src="https://picsum.photos/1800/1200"
-        alt="Elegant fashion model"
-        data-ai-hint="elegant fashion"
+        alt="Elegant Muslim fashion"
+        data-ai-hint="elegant muslim fashion"
         fill
         className="object-cover"
         priority
       />
       <div className="relative z-20 container mx-auto px-4 animate-in fade-in slide-in-from-bottom-12 duration-1000">
         <h1 className="text-4xl md:text-7xl font-headline mb-4 text-shadow">
-          Elegance in Modesty
+          L'élégance dans la modestie
         </h1>
         <p className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto text-shadow-sm">
-          Discover our curated collection of timeless and contemporary pieces.
+          Découvrez notre collection de pièces intemporelles et contemporaines.
         </p>
-        <Button size="lg" asChild>
-          <a href="#collection">Shop Now</a>
+        <Button size="lg" variant="secondary" asChild>
+          <a href="#collection">Acheter maintenant</a>
         </Button>
       </div>
     </section>
@@ -40,7 +40,7 @@ export default function Home() {
       <section className="py-12 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-headline mb-8 text-center">
-            New Arrivals
+            Nouveautés
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {newArrivals.map((product) => (
@@ -50,13 +50,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="collection" className="py-12 md:py-24 bg-card/80">
+      <section id="collection" className="py-12 md:py-24 bg-secondary/50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-headline mb-2 text-center">
-            Our Collection
+            Notre Collection
           </h2>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Browse through our wide range of high-quality apparel and accessories.
+            Parcourez notre large gamme de vêtements et d'accessoires de haute qualité.
           </p>
           <ProductGrid products={products} />
         </div>
@@ -65,11 +65,11 @@ export default function Home() {
       <section className="py-12 md:py-24">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-headline mb-2 text-center">
-            Personalized Styling by Niya
+            Styling personnalisé par Niya
           </h2>
           <p className="text-center text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Let our AI stylist help you find the perfect outfit. Tell us what
-            you're looking for, and we'll create a look just for you.
+            Laissez notre styliste IA vous aider à trouver la tenue parfaite. Dites-nous ce que
+            vous cherchez, et nous créerons un look juste pour vous.
           </p>
           <OutfitRecommender allProducts={products} />
         </div>

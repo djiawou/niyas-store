@@ -26,7 +26,7 @@ export function ProductGrid({ products }: ProductGridProps) {
           onClick={() => setActiveCategory("All")}
           className="rounded-full"
         >
-          All
+          Tout
         </Button>
         {categories.map((category) => (
           <Button
@@ -47,7 +47,7 @@ export function ProductGrid({ products }: ProductGridProps) {
       </div>
         {filteredProducts.length === 0 && (
             <div className="col-span-full text-center py-16">
-                <p className="text-muted-foreground">No products found for this category.</p>
+                <p className="text-muted-foreground">Aucun produit trouvé pour cette catégorie.</p>
             </div>
         )}
     </div>

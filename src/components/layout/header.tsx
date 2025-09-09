@@ -10,7 +10,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Logo } from "@/components/icons";
 
 const navItems = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "Accueil" },
   { href: "#collection", label: "Collection" },
   { href: "/contact", label: "Contact" },
 ];
@@ -21,9 +21,9 @@ export function SiteHeader() {
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-6 w-6 text-primary" />
+            <Logo className="h-8 w-8" />
             <span className="hidden font-bold sm:inline-block font-headline text-lg">
-              Niya's Atelier
+              Niya's Store
             </span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
@@ -53,8 +53,8 @@ export function SiteHeader() {
           <SheetContent side="left">
             <div className="flex flex-col h-full py-6">
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                    <Logo className="h-6 w-6 text-primary" />
-                    <span className="font-bold font-headline text-lg">Niya's Atelier</span>
+                    <Logo className="h-8 w-8" />
+                    <span className="font-bold font-headline text-lg">Niya's Store</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
@@ -78,9 +78,9 @@ export function SiteHeader() {
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Search products..."
+                  placeholder="Rechercher des produits..."
                   className="pl-9 h-9"
-                  aria-label="Search products"
+                  aria-label="Rechercher des produits"
                 />
               </div>
             </form>

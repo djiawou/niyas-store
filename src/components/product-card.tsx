@@ -10,7 +10,7 @@ interface ProductCardProps {
 export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <div className={cn("group relative animate-in fade-in duration-500", className)}>
-      <div className="aspect-[4/5] w-full overflow-hidden rounded-md bg-muted group-hover:opacity-75">
+      <div className="aspect-[4/5] w-full overflow-hidden rounded-lg bg-secondary group-hover:opacity-80 transition-opacity">
         <Image
           src={product.imageUrl}
           alt={product.name}

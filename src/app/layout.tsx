@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Alegreya, PT_Sans } from 'next/font/google';
+import { Playfair_Display, Roboto } from 'next/font/google';
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/layout/header";
@@ -7,17 +7,17 @@ import { SiteFooter } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: "Niya's Atelier",
+  title: "Niya's Store",
   description: "Modest fashion, traditional wear, and more.",
 };
 
-const fontHeadline = Alegreya({
+const fontHeadline = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-headline',
 });
 
-const fontBody = PT_Sans({
+const fontBody = Roboto({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',

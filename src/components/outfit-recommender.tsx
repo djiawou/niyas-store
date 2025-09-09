@@ -4,11 +4,11 @@ import { useFormState, useFormStatus } from "react-dom";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { getOutfitRecommendationAction } from "@/lib/actions";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ProductCard } from "./product-card";
 import type { Product } from "@/types";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
-import { Terminal } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 interface OutfitRecommenderProps {
   allProducts: Product[];
@@ -18,7 +18,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
   return (
     <Button type="submit" disabled={pending}>
-      {pending ? "Styling..." : "Get Recommendation"}
+      {pending ? "Recherche en cours..." : "Obtenir une recommandation"}
     </Button>
   );
 }
@@ -33,15 +33,16 @@ export function OutfitRecommender({ allProducts }: OutfitRecommenderProps) {
     .filter((p): p is Product => p !== undefined);
 
   return (
-    <Card className="max-w-4xl mx-auto">
-      <CardContent className="p-6">
+    <Card className="max-w-4xl mx-auto border-none shadow-none bg-transparent">
+        <CardContent className="p-0">
         <form action={formAction} className="flex flex-col gap-4">
           <Textarea
             name="preferences"
-            placeholder="e.g., 'I'm looking for a comfortable but elegant outfit for an evening event. I prefer earthy tones and natural fabrics.'"
+            placeholder="Ex: 'Je cherche une tenue confortable et élégante pour une soirée. Je préfère les tons terreux et les tissus naturels.'"
             rows={3}
             required
-            aria-label="Outfit preferences"
+            aria-label="Préférences de tenue"
+            className="bg-background"
           />
           <div className="flex justify-end">
             <SubmitButton />
@@ -50,16 +51,16 @@ export function OutfitRecommender({ allProducts }: OutfitRecommenderProps) {
 
         {state.message && !state.success && (
           <Alert variant="destructive" className="mt-4">
-            <AlertTitle>Error</AlertTitle>
+            <AlertTitle>Erreur</AlertTitle>
             <AlertDescription>{state.message}</AlertDescription>
           </Alert>
         )}
 
         {state.success && state.recommendation && (
           <div className="mt-6 animate-in fade-in duration-500">
-            <Alert className="mb-6 bg-primary/10 border-primary/20">
-              <Terminal className="h-4 w-4" />
-              <AlertTitle className="font-headline text-primary">Niya's Style Note</AlertTitle>
+            <Alert className="mb-6 border-primary/30">
+              <Sparkles className="h-4 w-4 text-primary" />
+              <AlertTitle className="font-headline text-primary">La note de style de Niya</AlertTitle>
               <AlertDescription>
                 {state.recommendation.explanation}
               </AlertDescription>
