@@ -10,26 +10,24 @@ interface ProductCardProps {
 export function ProductCard({ product, className }: ProductCardProps) {
   return (
     <div className={cn("group relative animate-in fade-in duration-500", className)}>
-      <div className="aspect-[4/5] w-full overflow-hidden rounded-lg bg-secondary group-hover:opacity-80 transition-opacity">
+      <div className="aspect-[4/5] w-full overflow-hidden rounded-xl bg-secondary group-hover:opacity-90 transition-opacity">
         <Image
           src={product.imageUrl}
           alt={product.name}
           width={400}
           height={500}
-          className="h-full w-full object-cover object-center"
+          className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
           data-ai-hint="fashion product"
         />
       </div>
-      <div className="mt-2 flex justify-between">
-        <div>
-          <h3 className="text-sm text-foreground">
-            <a href="#">
-              <span aria-hidden="true" className="absolute inset-0" />
-              {product.name}
-            </a>
-          </h3>
-        </div>
-        <p className="text-sm font-medium text-foreground">${product.price.toFixed(2)}</p>
+      <div className="mt-4">
+        <h3 className="text-base font-headline text-foreground font-medium">
+          <a href="#">
+            <span aria-hidden="true" className="absolute inset-0" />
+            {product.name}
+          </a>
+        </h3>
+        <p className="mt-1 text-lg font-semibold text-foreground">${product.price.toFixed(2)}</p>
       </div>
     </div>
   );

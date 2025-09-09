@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Roboto } from 'next/font/google';
+import { Cormorant_Garamond, Inter } from 'next/font/google';
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/layout/header";
@@ -11,17 +11,17 @@ export const metadata: Metadata = {
   description: "Modest fashion, traditional wear, and more.",
 };
 
-const fontHeadline = Playfair_Display({
+const fontHeadline = Cormorant_Garamond({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-headline',
+  weight: ['400', '500', '700'],
 });
 
-const fontBody = Roboto({
+const fontBody = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-body',
-  weight: ['400', '700'],
 });
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
       >
         <div className="relative flex min-h-screen flex-col">
           <SiteHeader />
-          <main className="flex-1 animate-in fade-in duration-500">{children}</main>
+          <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
         <Toaster />

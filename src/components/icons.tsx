@@ -19,7 +19,7 @@ export function Logo(props: SVGProps<SVGSVGElement>) {
         d="M65,5 C97.4,5 125,32.6 125,65 C125,97.4 97.4,125 65,125 C32.6,125 5,97.4 5,65 C5,32.6 32.6,5 65,5 Z"
         stroke="url(#logoGradient)"
         strokeWidth="10"
-        fill="none"
+        fill="hsl(var(--background))"
       />
       <text
         x="50%"

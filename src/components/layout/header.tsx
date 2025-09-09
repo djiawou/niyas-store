@@ -18,20 +18,20 @@ const navItems = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
+      <div className="container flex h-20 items-center">
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <Logo className="h-8 w-8" />
-            <span className="hidden font-bold sm:inline-block font-headline text-lg">
+            <Logo className="h-10 w-10" />
+            <span className="hidden font-bold sm:inline-block font-headline text-2xl text-primary">
               Niya's Store
             </span>
           </Link>
-          <nav className="flex items-center space-x-6 text-sm font-medium">
+          <nav className="flex items-center space-x-6 text-base font-medium">
             {navItems.map((item) => (
               <Link
                 key={item.label}
                 href={item.href}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
+                className="transition-colors hover:text-primary text-foreground/80"
               >
                 {item.label}
               </Link>
@@ -53,15 +53,15 @@ export function SiteHeader() {
           <SheetContent side="left">
             <div className="flex flex-col h-full py-6">
                 <Link href="/" className="mr-6 flex items-center space-x-2 mb-8">
-                    <Logo className="h-8 w-8" />
-                    <span className="font-bold font-headline text-lg">Niya's Store</span>
+                    <Logo className="h-10 w-10" />
+                    <span className="font-bold font-headline text-2xl text-primary">Niya's Store</span>
                 </Link>
                 <nav className="flex flex-col space-y-4">
                 {navItems.map((item) => (
                     <Link
                     key={item.label}
                     href={item.href}
-                    className="transition-colors hover:text-foreground/80 text-foreground/80 text-lg"
+                    className="transition-colors hover:text-primary text-foreground/80 text-xl"
                     >
                     {item.label}
                     </Link>
@@ -71,22 +71,22 @@ export function SiteHeader() {
           </SheetContent>
         </Sheet>
         
-        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+        <div className="flex flex-1 items-center justify-end space-x-2">
           <div className="w-full flex-1 md:w-auto md:flex-none">
             <form>
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   type="search"
-                  placeholder="Rechercher des produits..."
-                  className="pl-9 h-9"
+                  placeholder="Rechercher..."
+                  className="pl-9 h-10 rounded-full bg-secondary/50 border-0 focus:bg-secondary/80"
                   aria-label="Rechercher des produits"
                 />
               </div>
             </form>
           </div>
           <Button variant="ghost" size="icon" aria-label="Shopping Bag">
-            <ShoppingBag className="h-5 w-5" />
+            <ShoppingBag className="h-6 w-6" />
           </Button>
         </div>
       </div>
