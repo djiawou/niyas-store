@@ -69,16 +69,16 @@ export function SiteFooter() {
           <div className="flex flex-col gap-2">
             <h4 className="font-headline font-semibold">Suivez-nous</h4>
             <div className="flex items-center gap-4">
-                <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Instagram">
+                <Link href="#" className="text-foreground/70 hover:text-primary" aria-label="Instagram">
                     <Instagram className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Facebook">
+                <Link href="#" className="text-foreground/70 hover:text-primary" aria-label="Facebook">
                     <Facebook className="h-6 w-6" />
                 </Link>
-                <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="Pinterest">
+                <Link href="#" className="text-foreground/70 hover:text-primary" aria-label="Pinterest">
                     <PinterestIcon className="h-6 w-6" />
                 </Link>
-                 <Link href="#" className="text-muted-foreground hover:text-primary" aria-label="TikTok">
+                 <Link href="#" className="text-foreground/70 hover:text-primary" aria-label="TikTok">
                     <TikTokIcon className="h-6 w-6" />
                 </Link>
             </div>

@@ -28,9 +28,9 @@ function Hero() {
         </div>
         <div className="relative h-[60vh] md:h-full w-full rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-90 duration-1000">
           <Image
-            src="https://picsum.photos/id/366/800/1200"
+            src="https://picsum.photos/id/1011/800/1200"
             alt="Femme élégante portant une tenue traditionnelle africaine"
-            data-ai-hint="elegant woman traditional african fashion"
+            data-ai-hint="elegant modest fashion"
             fill
             className="object-cover"
             priority
