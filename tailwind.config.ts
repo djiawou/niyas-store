@@ -1,4 +1,7 @@
 import type {Config} from 'tailwindcss';
+const { fontFamily } = require("tailwindcss/defaultTheme")
+const plugin = require('tailwindcss/plugin')
+
 
 export default {
   darkMode: ['class'],
@@ -10,9 +13,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        headline: ["var(--font-headline)", ...fontFamily.serif],
+        body: ["var(--font-body)", ...fontFamily.sans],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -93,7 +95,23 @@ export default {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
+       textShadow: {
+        DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.5)',
+        sm: '0 1px 2px rgba(0, 0, 0, 0.5)',
+      },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(function ({ matchUtilities, theme }: { matchUtilities: any, theme: any }) {
+      matchUtilities(
+        {
+          'text-shadow': (value: any) => ({
+            textShadow: value,
+          }),
+        },
+        { values: theme('textShadow') }
+      )
+    }),
+  ],
 } satisfies Config;
