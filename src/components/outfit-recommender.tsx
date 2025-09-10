@@ -4,7 +4,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { getOutfitRecommendationAction } from "@/lib/actions";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { ProductCard } from "./product-card";
 import type { Product } from "@/types";
 import { Alert, AlertDescription, AlertTitle } from "./ui/alert";
@@ -33,8 +33,8 @@ export function OutfitRecommender({ allProducts }: OutfitRecommenderProps) {
     .filter((p): p is Product => p !== undefined);
 
   return (
-    <Card className="max-w-4xl mx-auto border-none shadow-none bg-transparent">
-        <CardContent className="p-0">
+    <Card className="max-w-4xl mx-auto border-none shadow-lg bg-card/80 backdrop-blur-sm">
+        <CardContent className="p-6">
         <form action={formAction} className="flex flex-col gap-4">
           <Textarea
             name="preferences"
@@ -42,7 +42,7 @@ export function OutfitRecommender({ allProducts }: OutfitRecommenderProps) {
             rows={3}
             required
             aria-label="Préférences de tenue"
-            className="bg-background"
+            className="bg-background/50 focus:bg-background"
           />
           <div className="flex justify-end">
             <SubmitButton />
@@ -58,7 +58,7 @@ export function OutfitRecommender({ allProducts }: OutfitRecommenderProps) {
 
         {state.success && state.recommendation && (
           <div className="mt-6 animate-in fade-in duration-500">
-            <Alert className="mb-6 border-primary/30">
+            <Alert className="mb-6 border-primary/30 bg-background/20">
               <Sparkles className="h-4 w-4 text-primary" />
               <AlertTitle className="font-headline text-primary">La note de style de Niya</AlertTitle>
               <AlertDescription>

@@ -80,14 +80,20 @@ export default {
             height: '0',
           },
         },
+        'ken-burns': {
+          '0%': { transform: 'scale(1) translate(0, 0)', },
+          '100%': { transform: 'scale(1.1) translate(-1%, 2%)', },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'ken-burns': 'ken-burns 15s ease-in-out infinite alternate-reverse',
       },
        textShadow: {
         DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.5)',
         sm: '0 1px 2px rgba(0, 0, 0, 0.5)',
+        lg: '0 4px 10px rgba(0, 0, 0, 0.7)',
       },
     },
   },

@@ -8,33 +8,29 @@ import { ArrowRight } from "lucide-react";
 
 function Hero() {
   return (
-    <section className="w-full bg-background">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center min-h-[80vh] py-12 md:py-24">
-        <div className="flex flex-col items-start text-left animate-in fade-in slide-in-from-left-12 duration-1000">
-          <h1 className="text-5xl md:text-7xl font-headline font-bold text-primary mb-4">
-            Niya's Store
-          </h1>
-          <p className="text-xl md:text-2xl font-headline mb-6 max-w-lg text-foreground/80">
-            L'élégance intemporelle rencontre la mode pudique et traditionnelle.
-          </p>
-          <p className="mb-8 text-muted-foreground">
-            Découvrez nos collections uniques de pagnes, abayas, et voiles, conçues pour la femme moderne qui chérit son héritage.
-          </p>
-          <Button size="lg" asChild>
+    <section className="relative w-full h-[90vh] overflow-hidden">
+      <div className="absolute inset-0 bg-black/60 z-10" />
+      <Image
+        src="https://picsum.photos/seed/hero2/1800/1200"
+        alt="Femme élégante portant une tenue traditionnelle africaine"
+        data-ai-hint="elegant modest fashion gold"
+        fill
+        className="object-cover animate-ken-burns"
+        priority
+      />
+      <div className="container relative z-20 flex flex-col items-center justify-center h-full text-center text-white">
+        <h1 className="text-5xl md:text-8xl font-headline font-bold text-white mb-4 text-shadow-lg animate-in fade-in slide-in-from-bottom-12 duration-1000">
+          Niya's Store
+        </h1>
+        <p className="text-xl md:text-2xl font-headline mb-8 max-w-2xl text-white/90 text-shadow animate-in fade-in slide-in-from-bottom-16 duration-1000 delay-200">
+          L'élégance intemporelle rencontre la mode pudique et traditionnelle.
+        </p>
+        <div className="animate-in fade-in slide-in-from-bottom-20 duration-1000 delay-400">
+          <Button size="lg" variant="default" asChild className="bg-primary hover:bg-accent text-primary-foreground">
             <a href="#collection">
               Explorer la collection <ArrowRight className="ml-2" />
             </a>
           </Button>
-        </div>
-        <div className="relative h-[60vh] md:h-full w-full rounded-2xl overflow-hidden shadow-2xl animate-in fade-in zoom-in-90 duration-1000">
-          <Image
-            src="https://picsum.photos/id/1011/800/1200"
-            alt="Femme élégante portant une tenue traditionnelle africaine"
-            data-ai-hint="elegant modest fashion"
-            fill
-            className="object-cover"
-            priority
-          />
         </div>
       </div>
     </section>
@@ -44,13 +40,13 @@ function Hero() {
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-background">
       <Hero />
 
-      <section className="py-12 md:py-24 bg-secondary/30">
+      <section className="py-12 md:py-24 bg-card">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">
               Nouveautés
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -79,10 +75,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-24 bg-secondary/30">
+      <section className="py-12 md:py-24 bg-card">
         <div className="container">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">
               Styling Personnalisé par Niya
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
