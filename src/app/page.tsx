@@ -94,9 +94,8 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">
               Styling Personnalisé par Niya
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Laissez notre styliste IA vous aider à trouver la tenue parfaite. Dites-nous ce que
-              vous cherchez, et nous créerons un look juste pour vous.
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Chez Niya's Store, nous croyons que chaque femme est unique. C'est pourquoi nous vous offrons un service de stylisme personnalisé exclusif. Niya, notre experte en mode, et son assistante IA allient savoir-faire traditionnel et tendances actuelles pour composer la tenue qui vous ressemble. Que vous cherchiez une abaya pour une grande occasion, un pagne aux motifs vibrants pour affirmer votre style ou un voile délicat pour compléter votre look, décrivez-nous vos envies. Nous nous occupons de créer pour vous un ensemble harmonieux et élégant qui célèbre votre personnalité.
             </p>
           </div>
           <OutfitRecommender allProducts={products} />
