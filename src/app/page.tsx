@@ -11,13 +11,13 @@ function Hero() {
   return (
     <section className="relative w-full h-[90vh] overflow-hidden">
       <div className="absolute inset-0 bg-black/60 z-10" />
-      <Image
-        src="https://picsum.photos/seed/freepik1/1800/1200"
-        alt="Femme élégante portant une tenue traditionnelle africaine"
-        data-ai-hint="elegant african fashion freepik"
-        fill
-        className="object-cover animate-ken-burns"
-        priority
+      <video
+        src="/videos/hero-video.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute z-0 w-full h-full object-cover"
       />
       <div className="container relative z-20 flex flex-col items-center justify-center h-full text-center text-white">
         <h1 className="text-5xl md:text-8xl font-headline font-bold text-white mb-4 text-shadow-lg animate-in fade-in slide-in-from-bottom-12 duration-1000">
