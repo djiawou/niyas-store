@@ -41,7 +41,7 @@ function Hero() {
 const WhatsAppButton = () => (
     <div className="mt-10 text-center">
         <Button size="lg" asChild className="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg">
-            <Link href="https://wa.me/1234567890" target="_blank">
+            <Link href="https://wa.me/22997839640" target="_blank">
                 <MessageCircle className="mr-2" /> Contacter via WhatsApp
             </Link>
         </Button>

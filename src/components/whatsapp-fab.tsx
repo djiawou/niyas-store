@@ -18,7 +18,7 @@ export function WhatsappFab() {
     }, []);
 
     // Replace with your actual WhatsApp number
-    const whatsappNumber = "+229 97 83 96 40"; 
+    const whatsappNumber = "22997839640"; 
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
     return (
