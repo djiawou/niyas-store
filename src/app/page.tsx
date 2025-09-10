@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { products, newArrivals } from "@/lib/data";
 import { ProductCard } from "@/components/product-card";
 import { ProductGrid } from "@/components/product-grid";
-import { OutfitRecommender } from "@/components/outfit-recommender";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Link from "next/link";
 
@@ -94,11 +93,28 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-headline font-bold mb-4 text-primary">
               Styling Personnalisé par Niya
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Chez Niya's Store, nous croyons que chaque femme est unique. C'est pourquoi nous vous offrons un service de stylisme personnalisé exclusif. Niya, notre experte en mode, et son assistante IA allient savoir-faire traditionnel et tendances actuelles pour composer la tenue qui vous ressemble. Que vous cherchiez une abaya pour une grande occasion, un pagne aux motifs vibrants pour affirmer votre style ou un voile délicat pour compléter votre look, décrivez-nous vos envies. Nous nous occupons de créer pour vous un ensemble harmonieux et élégant qui célèbre votre personnalité.
-            </p>
           </div>
-          <OutfitRecommender allProducts={products} />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-lg text-muted-foreground max-w-3xl mx-auto text-left">
+               <p>
+                Chez Niya's Store, nous croyons que chaque femme est unique. C'est pourquoi nous vous offrons un service de stylisme personnalisé exclusif. Niya, notre experte en mode, et son assistante IA allient savoir-faire traditionnel et tendances actuelles pour composer la tenue qui vous ressemble. 
+              </p>
+              <br/>
+              <p>
+                Que vous cherchiez une abaya pour une grande occasion, un pagne aux motifs vibrants pour affirmer votre style ou un voile délicat pour compléter votre look, décrivez-nous vos envies. Nous nous occupons de créer pour vous un ensemble harmonieux et élégant qui célèbre votre personnalité.
+              </p>
+            </div>
+            <div className="rounded-xl overflow-hidden shadow-2xl shadow-primary/20">
+              <video
+                src="/videos/styling-video.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </div>
