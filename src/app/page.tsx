@@ -4,7 +4,8 @@ import { products, newArrivals } from "@/lib/data";
 import { ProductCard } from "@/components/product-card";
 import { ProductGrid } from "@/components/product-grid";
 import { OutfitRecommender } from "@/components/outfit-recommender";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -37,6 +38,16 @@ function Hero() {
   );
 }
 
+const WhatsAppButton = () => (
+    <div className="mt-10 text-center">
+        <Button size="lg" asChild className="bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg">
+            <Link href="https://wa.me/1234567890" target="_blank">
+                <MessageCircle className="mr-2" /> Contacter via WhatsApp
+            </Link>
+        </Button>
+    </div>
+);
+
 
 export default function Home() {
   return (
@@ -58,6 +69,7 @@ export default function Home() {
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
+          <WhatsAppButton />
         </div>
       </section>
 
@@ -72,6 +84,7 @@ export default function Home() {
             </p>
           </div>
           <ProductGrid products={products} />
+          <WhatsAppButton />
         </div>
       </section>
 
