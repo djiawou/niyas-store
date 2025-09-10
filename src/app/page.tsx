@@ -11,9 +11,9 @@ function Hero() {
     <section className="relative w-full h-[90vh] overflow-hidden">
       <div className="absolute inset-0 bg-black/60 z-10" />
       <Image
-        src="https://picsum.photos/seed/hero2/1800/1200"
+        src="https://picsum.photos/seed/freepik1/1800/1200"
         alt="Femme élégante portant une tenue traditionnelle africaine"
-        data-ai-hint="elegant modest fashion gold"
+        data-ai-hint="elegant african fashion freepik"
         fill
         className="object-cover animate-ken-burns"
         priority

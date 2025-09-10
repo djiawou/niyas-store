@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/layout/header";
 import { SiteFooter } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/toaster";
+import { WhatsappFab } from "@/components/whatsapp-fab";
 
 export const metadata: Metadata = {
   title: "Niya's Store",
@@ -43,6 +44,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <SiteFooter />
         </div>
+        <WhatsappFab />
         <Toaster />
       </body>
     </html>

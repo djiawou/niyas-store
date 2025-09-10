@@ -15,10 +15,10 @@ export function ProductCard({ product, className }: ProductCardProps) {
         <Image
           src={product.imageUrl}
           alt={product.name}
-          width={400}
-          height={500}
+          width={800}
+          height={1000}
           className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-          data-ai-hint="pagne fabric african fashion"
+          data-ai-hint="pagne fabric african fashion freepik"
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-20 p-4">
